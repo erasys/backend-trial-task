@@ -20,6 +20,8 @@ jobs:
           RELEASE_TAG: ${{ steps.swagger-ui.outputs.release_tag }}
           SWAGGER_YAML: "swagger.yml"
         run: |
+          # Go into docs subfolder
+          cd docs
           # Delete the dist directory and index.html
           rm -fr dist index.html
           # Download the release

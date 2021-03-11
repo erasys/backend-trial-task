@@ -4,7 +4,7 @@ Please use Node.js 12+ and a web framework of your choice to implement the follo
 
 ## Password check API
 
-Implement an API in Node.js that provides an endpoint to check a password. The endpoint should allow to POST a password and respond with either a [204](https://httpstatusdogs.com/204-no-content) if the password is fine or with a [400](https://httpstatusdogs.com/400-bad-request) and a set of errors in case the password does not match the minimal password rules. Please consult the swagger documentation in _swagger.yml_ for the desired API structure.
+Implement an API in Node.js that provides an endpoint to check a password. The endpoint should allow to POST a password and respond with either a [204](https://httpstatusdogs.com/204-no-content) if the password is fine or with a [400](https://httpstatusdogs.com/400-bad-request) and a set of errors in case the password does not match the minimal password rules. Please consult the swagger UI at https://erasys.github.io/backend-trial-task/ (browsing `swagger.yml`) for the desired API structure.
 
 ## Script for checking passwords
 
@@ -12,7 +12,11 @@ We provided you with an SQL dump of 200 passwords. Write a CLI script in Node.js
 
 ## Checking for compromised passwords (BONUS)
 
-Extend your script to check each password not only for validity but also if it has been compromised in the past. Consolidate the provided compromised-password API for this. You can find all information about it in the sub-folder _compromised-pw_.
+Extend your script to check each password not only for validity but also if it has been compromised in the past. Consolidate the provided compromised-password API for this.
+
+### Using the compromised password API
+
+There is a docker image available for you [on docker-hub](https://hub.docker.com/r/erasys/compromised-pw-api). It exposes a very simple API via port 5000. You can find the API documentation in the Swagger UI at https://erasys.github.io/backend-trial-task/ – **please browse `swagger-compromised.yml` to see the correct API definitions**.
 
 ## Sending the solution to us
 
