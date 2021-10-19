@@ -1,6 +1,12 @@
 # Trial task for back-end developers
 
-Please use Node.js 12+, MySQL and a web framework of your choice to implement the following trial task. You can use any node libraries you think are necessary or helpful for you, but it helps us a lot if you keep it minimal. It is recommended to use some code-formatter and linter of your choice (we recommend [Prettier](https://prettier.io/) and [XO](https://github.com/xojs/xo)).
+Please use Node.js 12+, MySQL and a web framework of your choice to implement the following trial task. You can use TypeScript and any node libraries you think are necessary or helpful for you, but it helps us a lot if you keep it minimal. It is recommended to use some code-formatter and linter of your choice (we recommend [Prettier](https://prettier.io/) and [XO](https://github.com/xojs/xo)).
+
+What we value when reviewing your task:
+- attention to perfomance and scalability
+- a good README with instructions on how to run your execution
+- good code architecture
+- polished result: not too many typos or commented code and consistent styling
 
 If you have any questions regarding the task, feel free to reach out to us anytime!
 
@@ -14,10 +20,10 @@ The rules to check if a password is valid should be stored in a separate configu
 - Error message to show in case the rule is not met
 
 The ruleset the passwords have to be validated against is:
-- length is minimum 5 characters
+- Length is minimum five characters
 - At least one digit is used
-- There are no more than two repeating characters (like 'bbb' – 2 are allowed, but not 3 or more)
-- There is at least one upper-case character OR one special character [anything that is neither letter or a number]
+- There are no more than two repeating consecutive characters (like 'bbb' – two are allowed, but not three or more)
+- There is at least one upper-case character OR one special character [anything that is neither letter nor a number]
 
 ## 2 - Script for checking passwords
 
