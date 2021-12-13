@@ -1,6 +1,6 @@
 # Trial task for back-end developers
 
-Please use Node.js 12+, MySQL and a web framework of your choice to implement the following trial task. You can use TypeScript and any node libraries you think are necessary or helpful for you, but it helps us a lot if you keep it minimal. It is recommended to use some code-formatter and linter of your choice (we recommend [Prettier](https://prettier.io/) and [XO](https://github.com/xojs/xo)).
+For this task, we ask you to use Node.js 12+ (TypeScript is an option), MySQL and a web framework of your choice to implement the following trial task. You can use TypeScript and any node libraries you think are necessary or helpful for you, but it helps us a lot if you keep it minimal. We recommend using some code-formatter and linter of your choice (we recommend [Prettier](https://prettier.io/) and [XO](https://github.com/xojs/xo)).
 
 What we value when reviewing your task:
 - attention to perfomance and scalability
@@ -8,11 +8,11 @@ What we value when reviewing your task:
 - good code architecture
 - polished result: not too many typos or commented code and consistent styling
 
-If you have any questions regarding the task, feel free to reach out to us anytime!
+If you have any questions regarding the task, please reach out to us anytime!
 
-## 1 - Password check API
+## Task 1 - Password validation API
 
-Implement an API in Node.js that provides an endpoint to check a password. The endpoint should allow to POST a password and respond with either a [204](https://httpstatusdogs.com/204-no-content) if the password is fine or with a [400](https://httpstatusdogs.com/400-bad-request) and a set of errors in case the password does not match the minimal password rules. Please consult the [Swagger UI in the GitHub page of this project](https://erasys.github.io/backend-trial-task/?url=swagger.yml) for the desired API structure.
+Implement an API that provides an endpoint to validate a password. The endpoint should allow to POST a password and respond with either a [204](https://httpstatusdogs.com/204-no-content) if the password is fine or with a [400](https://httpstatusdogs.com/400-bad-request) and a set of errors in case the password does not match the minimal password rules. Consult the [Swagger UI in the GitHub page of this project](https://erasys.github.io/backend-trial-task/?url=swagger.yml) for the desired API structure.
 
 The rules to check if a password is valid should be stored in a separate configuration file (JSON, YAML or something else). This file should include the following information per rule:
 
@@ -25,17 +25,17 @@ The ruleset the passwords have to be validated against is:
 - There are no more than two repeating consecutive characters (like 'bbb' – two are allowed, but not three or more)
 - There is at least one upper-case character OR one special character [anything that is neither letter nor a number]
 
-## 2 - Script for checking passwords
+## Task 2 - Script for batch-validation of passwords
 
-We provided you with an SQL dump of 200 passwords. Write a CLI script in Node.js that reads those passwords from a DB and uses the API you created earlier to validate each of them. It should output a success message or the errors you received from the API for each of the responses.
+We provided you with an SQL dump of 200 passwords. Write a CLI script in Node.js that reads those passwords from a DB and uses the API you created earlier to validate each of them. It should output a success message or the errors you received from the API for each response.
 
-The script must set the `valid` field to 1 or 0 for valid and invalid passwords.
+The script must also set the `valid` field to 1 or 0 for valid and invalid passwords in the given MySQL table.
 
 Please provide and document a possibility to change the MySQL connection settings used by the script.
 
-## 3 (BONUS) - Checking for compromised passwords
+## Task 3 (BONUS) - Checking for compromised passwords
 
-Extend your script to check each password not only for validity but also if it has been compromised in the past. Please use the provided compromised password API for this.
+Extend the script you produced for Task 2 to include a check that marks passwords as invalid if they have been compromised in the past. An API providing you this information is already provided (see the next paragraph).
 
 ### Using the compromised password API
 
