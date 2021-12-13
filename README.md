@@ -1,6 +1,13 @@
 # Trial task for back-end developers
 
-For this task, we ask you to use Node.js 12+ (TypeScript is an option), MySQL and a web framework of your choice to implement the following trial task. You can use TypeScript and any node libraries you think are necessary or helpful for you, but it helps us a lot if you keep it minimal. We recommend using some code-formatter and linter of your choice (we recommend [Prettier](https://prettier.io/) and [XO](https://github.com/xojs/xo)).
+Someone from support notified us that users are using too many times passwords like "password", "dog123", or "heeello" and their accounts are getting hacked by their neighbours to see private pictures of their private parts.
+We need this fixed ASAP, but our developers are busy working on the next-cool-feature™ using the next-cool-stack™, and they have no time for implementing the changes needed to fix the issue. So our only chance is YOU!*
+
+Your objective for this task is to build two components:
+a REST API that receives a password and gives information about its validity, given a set of rules
+a script that reads the already existing passwords from the database and sets a validity flag based on the API you implement
+
+We ask you to use Node.js 12+ (TypeScript is an option), MySQL and a web framework of your choice to implement the following trial task. You can use TypeScript and any node libraries you think are necessary or helpful for you, but it helps us a lot if you keep it minimal. We recommend using some code-formatter and linter of your choice (we recommend [Prettier](https://prettier.io/) and [XO](https://github.com/xojs/xo)).
 
 What we value when reviewing your task:
 - attention to perfomance and scalability
@@ -35,7 +42,7 @@ Please provide and document a possibility to change the MySQL connection setting
 
 ## Task 3 (BONUS) - Checking for compromised passwords
 
-Extend the script you produced for Task 2 to include a check that marks passwords as invalid if they have been compromised in the past. An API providing you this information is already provided (see the next paragraph).
+Extend the script you produced for Task 2 to include a check that uses a second API which tells you if passwords have been compromised in the past. This second API is already provided (see the next paragraph).
 
 ### Using the compromised password API
 
@@ -44,3 +51,5 @@ There is a docker image available for you [on docker-hub](https://hub.docker.com
 ## Sending the solution to us
 
 You can choose to send the solution as a ZIP archive (https://git-scm.com/docs/git-archive) or upload it as a private repository to a GIT hoster of your choice, giving us access to it.
+
+*this is just a joke, our systems does not accept passwords that are so simple, duh! 💅
