@@ -4,8 +4,8 @@ Someone from support notified us that users are using too many times passwords l
 We need this fixed ASAP, but our developers are busy working on the next-cool-feature™ using the next-cool-stack™, and they have no time for implementing the changes needed to fix the issue. So our only chance is YOU!*
 
 Your objective for this task is to build two components:
-a REST API that receives a password and gives information about its validity, given a set of rules
-a script that reads the already existing passwords from the database and sets a validity flag based on the API you implement
+- a REST API that receives a password and gives information about its validity, given a set of rules
+- a script that reads the already existing passwords from the database and sets a validity flag based on the API you implement
 
 We ask you to use Node.js 12+ (TypeScript is an option), MySQL and a web framework of your choice to implement the following trial task. You can use TypeScript and any node libraries you think are necessary or helpful for you, but it helps us a lot if you keep it minimal. We recommend using some code-formatter and linter of your choice (we recommend [Prettier](https://prettier.io/) and [XO](https://github.com/xojs/xo)).
 
@@ -13,7 +13,7 @@ What we value when reviewing your task:
 - attention to perfomance and scalability
 - a good README with instructions on how to run your execution
 - good code architecture
-- polished result: not too many typos or commented code and consistent styling
+- consistent styling, and not too many typos or commented code
 
 If you have any questions regarding the task, please reach out to us anytime!
 
@@ -42,11 +42,10 @@ Please provide and document a possibility to change the MySQL connection setting
 
 ## Task 3 (BONUS) - Checking for compromised passwords
 
-Extend the script you produced for Task 2 to include a check that uses a second API which tells you if passwords have been compromised in the past. This second API is already provided (see the next paragraph).
+Extend the script you produced for Task 2 to include a check that uses a second API which tells you if passwords have been compromised in the past.
+This second API is already provided by [this image](https://hub.docker.com/r/erasys/compromised-pw-api). It exposes a very simple API via port 5000.
+You can find the API documentation in the [Swagger UI in the GitHub page of this project](https://erasys.github.io/backend-trial-task/?url=swagger-compromised.yml).
 
-### Using the compromised password API
-
-There is a docker image available for you [on docker-hub](https://hub.docker.com/r/erasys/compromised-pw-api). It exposes a very simple API via port 5000. You can find the API documentation in the [Swagger UI in the GitHub page of this project](https://erasys.github.io/backend-trial-task/?url=swagger-compromised.yml).
 
 ## Sending the solution to us
 
